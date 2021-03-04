@@ -88,7 +88,7 @@ function crewReports(animalObjects){
 }
 
 function fitnessTest (candidates){
-  lets results = [] numSteps, turns;
+  let results = [] numSteps, turns;
   for (let i = 0; i< candidates.length, i++){
     numSteps = 0;
     turns = 0;
