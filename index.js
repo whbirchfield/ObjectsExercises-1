@@ -57,7 +57,7 @@ for (item in salamander){
 }
 
 
-function crewReports (animalObjects){
+function crewReports ( for in animalObjects){
 
   let sentence = (`${animalObjects["name"]} is a ${animalObjects["species"]}. They are ${animalObjects["age"]} years old and ${animalObjects["mass"]} kilograms. Their ID is ${animalObjects["astronautID"]}.`)
   return sentence;
@@ -70,4 +70,4 @@ function crewReports (animalObjects){
 // Print out the relevant information about each animal.
 
 // Start an animal race!
-console.log(crewReports(superChimpTwo));
+console.log(crewReports(crew));
