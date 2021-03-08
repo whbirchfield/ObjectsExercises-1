@@ -57,30 +57,28 @@ console.log('\n')
 
 function crewReports(animalObjects) {
   let i =0;
+  let animalLines ='';
   while (i < animalObjects.length) {
-    console.log(`${animalObjects[i].name} is a ${animalObjects[i].species}. They are ${animalObjects[i].age} years old and ${animalObjects[i].mass} kilograms. Their ID is ${animalObjects[i].astronautID}.\n`);
+    animalLines += (`${animalObjects[i].name} is a ${animalObjects[i].species}. They are ${animalObjects[i].age} years old and ${animalObjects[i].mass} kilograms. Their ID is ${animalObjects[i].astronautID}.\n`);
     i++;
   }
-  return;
+  return animalLines;
 }
 
 
 function fitnessTest (fitnessCrewArray){
-  let stepsTaken = 0;
-  let turns = 0;
-  let i = 0;
+
+  let i =0;
+  let fitnessLines = '';
   while (i<fitnessCrewArray.length){
-   if(stepsTaken<20){
+    let turns = 0;
+    for (stepsTaken = 0; stepsTaken<20 ; turns ++){
      stepsTaken += (fitnessCrewArray[i].move());
-     turns++;
-     console.log(turns);
-    // console.log(fitnessCrewArray[i]);
-   } else{
-     console.log(`${fitnessCrewArray[i].name} took ${turns} turns to take 20 steps.`);
    }
-   i++;
+   fitnessLines += (`${fitnessCrewArray[i].name} took ${turns} turns to take 20 steps.\n`);
+    i++;
+   } return fitnessLines;
  }
-}
 
 
 /*
@@ -97,5 +95,4 @@ function fitnessTest (candidates){
 // Print out the relevant information about each animal.
 console.log(crewReports(crewArray));
 // Start an animal race!
-
 console.log(fitnessTest(crewArray));
