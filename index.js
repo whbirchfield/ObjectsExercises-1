@@ -63,6 +63,26 @@ function crewReports(animalObjects) {
   }
   return;
 }
+
+
+function fitnessTest (fitnessCrewArray){
+  let stepsTaken = 0;
+  let turns = 0;
+  let i = 0;
+  while (i<fitnessCrewArray.length){
+   if(stepsTaken<20){
+     stepsTaken += (fitnessCrewArray[i].move());
+     turns++;
+     console.log(turns);
+    // console.log(fitnessCrewArray[i]);
+   } else{
+     console.log(`${fitnessCrewArray[i].name} took ${turns} turns to take 20 steps.`);
+   }
+   i++;
+ }
+}
+
+
 /*
 function fitnessTest (candidates){
   let results = [] numSteps, turns;
@@ -77,6 +97,5 @@ function fitnessTest (candidates){
 // Print out the relevant information about each animal.
 console.log(crewReports(crewArray));
 // Start an animal race!
-console.log(superChimpOne.move())
 
-//console.log(animalObjects);
+console.log(fitnessTest(crewArray));
