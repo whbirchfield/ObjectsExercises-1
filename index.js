@@ -80,15 +80,7 @@ function fitnessTest (fitnessCrewArray){
    } return fitnessLines;
  }
 
-
-/*
-function fitnessTest (candidates){
-  let results = [] numSteps, turns;
-  for (let i = 0; i< candidates.length, i++){
-    numSteps = 0;
-    turns = 0;
-  }
-} */
+ 
 // After you have created the other object literals, add the astronautID property to each one.
 // Create an array to hold the animal objects.
 
