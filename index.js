@@ -40,37 +40,10 @@ let superInsect = {
   mass: 0.0000000001,
   age: 1,
   astronautID: 4,
-  move: function() {return (Math.floor(Math.random()*11))}
+  move: function() { return (Math.floor(Math.random() * 11)) }
 };
 
-let crew = [{name: "Chad",
-  species: "Chimpanzee",
-  mass: 9,
-  age: 6,
-  astronautID: 1,
-  move: function() { return Math.floor(Math.random() * 11) }}, {name: "Lacey",
-  species: "Axolotl Salamander",
-  mass: 0.1,
-  age: 5,
-  astronautID: 2,
-  move: function() { return Math.floor(Math.random() * 11) }},{name: "Brad",
-  species: "Chimpanzee",
-  mass: 11,
-  age: 6,
-  astronautID: 10,
-  move: function() { return Math.floor(Math.random() * 11) }}, {name: "Leroy",
-  species: "Beagle",
-  mass: 14,
-  age: 5,
-  astronautID: 3,
-  move: function() { return Math.floor(Math.random() * 11) }}, {name: "Almina",
-  species: "Tardigrade",
-  mass: 0.0000000001,
-  age: 1,
-  astronautID: 4,
-  move: function() { return Math.floor(Math.random()*11)}}];
-
-let testCrew = ['superChimpOne', 'superChimpTwo']
+let crewArray = [superChimpOne, salamander, superChimpTwo, superCanine, superInsect];
 
 for (item in superChimpOne) {
   console.log(item + ", " + superChimpOne[item]);
@@ -82,23 +55,27 @@ for (item in salamander) {
 }
 console.log('\n')
 
-function crewReports(animalObjects){
-  let sentence = `${animalObjects.name} is a ${animalObjects.species}. They are ${animalObjects.age} years old and ${animalObjects.mass} kilograms. Their ID is ${animalObjects.astronautID}.\n`
- return sentence;
+function crewReports(animalObjects) {
+  let i =0;
+  while (i < animalObjects.length) {
+    console.log(`${animalObjects[i].name} is a ${animalObjects[i].species}. They are ${animalObjects[i].age} years old and ${animalObjects[i].mass} kilograms. Their ID is ${animalObjects[i].astronautID}.\n`);
+    i++;
+  }
+  return;
 }
-
+/*
 function fitnessTest (candidates){
   let results = [] numSteps, turns;
   for (let i = 0; i< candidates.length, i++){
     numSteps = 0;
     turns = 0;
   }
-}
+} */
 // After you have created the other object literals, add the astronautID property to each one.
 // Create an array to hold the animal objects.
 
 // Print out the relevant information about each animal.
-console.log(crewReports(superChimpOne));
+console.log(crewReports(crewArray));
 // Start an animal race!
 console.log(superChimpOne.move())
 
